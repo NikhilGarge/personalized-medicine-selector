@@ -42,7 +42,7 @@ This project demonstrates a computational framework for **personalized treatment
 
 ## Project Structure
 
-- `Treatment_response_Code_v5.R`  
+- `Genomic_Treatment_Selection_T2D.R`  
   Main R script for data simulation, model training, and evaluation.
 
 - `README.md`  
@@ -59,23 +59,24 @@ This project demonstrates a computational framework for **personalized treatment
 ## How to Run
 
 1. **Clone the repository:**
-`git clone https://github.com/NikhilGarge/personalized-medicine-selector.git/`
+`git clone https://github.com/NikhilGarge/personalized-medicine-selector.git/`  
 `cd personalized-medicine-selector/`
 
-2. **Install dependencies:**  
+3. **Install dependencies:**  
 - R packages: `model4you`, `party`, `caret`, `dplyr`, etc.
 - (Optional) Python: `rpy2` for R-Python integration.
 
 3. **Run the main script:**
 Execute the main R script with default parameters:  
 
-`source("Treatment_response_Code_v5.R")/`
+`source("Genomic_Treatment_Selection_T2D.R")/`
 
 `results <- run_full_workflow(
-n_patients = 10000,
-n_snps = 1000,
-n_top_snps = 100,
-treatment_effects = c(T1 = 0, T2 = -0.3, T3 = -0.6, T4 = -0.9)
+n_patients = 1000,
+n_snps = 2000,
+n_top_snps = 20,
+treatment_effects = c(T1 = 0, T2 = -0.3, T3 = -0.6, T4 = -0.9),
+ntree = 100
 )`
 
 4. **Key Outputs:**
@@ -95,4 +96,4 @@ treatment_effects = c(T1 = 0, T2 = -0.3, T3 = -0.6, T4 = -0.9)
 
 ## References  
 1. Treatment effect analysis with `model4you` and ensemble methods.
-2. Analysis of personalized treatment options from a large clinical trial
+2. Analysis of personalized treatment options from a large clinical trial (APHA)
