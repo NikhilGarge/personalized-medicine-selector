@@ -37,7 +37,7 @@ This project demonstrates a computational framework for **personalized treatment
 `install.packages(c("model4you", "party", "caret", "dplyr", "tidyr"))`
 
 ### Clone Repository  
-`git clone https://github.com/NikhilGarge/personalized-medicine-selector.git/`
+`git clone https://github.com/NikhilGarge/personalized-medicine-selector.git/`  
 `cd personalized-medicine-selector/`
 
 ## Project Structure
@@ -58,7 +58,7 @@ This project demonstrates a computational framework for **personalized treatment
 
 ## How to Run
 
-1. **Clone the repository:**
+1. **Clone the repository:**  
 `git clone https://github.com/NikhilGarge/personalized-medicine-selector.git/`  
 `cd personalized-medicine-selector/`
 
