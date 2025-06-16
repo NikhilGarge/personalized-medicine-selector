@@ -82,7 +82,7 @@ ntree = 100
 4. **Key Outputs:**
 - train_data / test_data: training and test sets.
 - best_treatment_pred: Optimal treatment selected per patient on test data.
-- eval_results: Model evaluation using R-Squared metric on training and test sets. This helps in fine tuning the parameters of model to avoid underfitting/overfitting of models
+- eval_results: Model evaluation using R-Squared metric on training and test sets. This helps in fine tuning the input parameters to avoid underfitting/overfitting of the models.
 
 ---
 
