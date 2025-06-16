@@ -59,7 +59,7 @@ This project demonstrates a computational framework for **personalized treatment
 ## How to Run
 
 1. **Clone the repository:**
-`git clone https://github.com/NikhilGarge/personalized-medicine-selector.git`
+`git clone https://github.com/NikhilGarge/personalized-medicine-selector.git/`
 `cd personalized-medicine-selector`
 
 2. **Install dependencies:**  
@@ -69,7 +69,7 @@ This project demonstrates a computational framework for **personalized treatment
 3. **Run the main script:**
 Execute the main R script with default parameters:  
 
-`source("Treatment_response_Code_v5.R")`
+`source("Treatment_response_Code_v5.R")/`
 
 `results <- run_full_workflow(
 n_patients = 10000,
