@@ -11,19 +11,19 @@ This project demonstrates a computational framework for **personalized treatment
 
 ### 1. **Simulated Genomic Data Generation**  
    - Generates synthetic SNP datasets mimicking real-world genetic diversity.  
-   - Models gene-treatment interactions to identify treatment-responsive variants[1][4].
+   - Models gene-treatment interactions to identify treatment-responsive variants.
 
 ### 2. **SNP Prioritization**  
-   - Identifies top 100 statistically significant SNPs influencing treatment efficacy through gene-treatment interaction mapping[4].
+   - Identifies top 100 statistically significant SNPs influencing treatment efficacy through gene-treatment interaction mapping.
 
 ### 3. **Personalized Treatment Modeling**  
    - Implements **ensemble MOB trees** using the `model4you` R library to:  
-   - Stratify patients into subgroups with differential treatment responses[2][5].  
-   - Estimate personalized treatment effects via bootstrapped subsampling[2][5].
+   - Stratify patients into subgroups with differential treatment responses[1].  
+   - Estimate personalized treatment effects via bootstrapped subsampling[1][2].
 
 ### 4. **Clinical Decision Support**  
    - Outputs treatment recommendations tailored to individual genetic profiles.  
-   - Provides interpretable models for clinical translation[1][5].
+   - Provides interpretable models for clinical translation[1].
 
 ---
 
@@ -89,10 +89,10 @@ treatment_effects = c(T1 = 0, T2 = -0.3, T3 = -0.6, T4 = -0.9)
 - Demonstrates how **genomic data** can bridge the gap between research and clinical practice.  
 - Provides methodology for:  
   - Precision treatment selection 
-  - Drug repurposing based on genetic subgroups[1][2][5].
+  - Drug repurposing based on genetic subgroups[1][2].
 
 ---
 
 ## References  
-1. Personalized medicine projects using genomic data and MOB models[1][4][5].  
-2. Treatment effect analysis with `model4you` and ensemble methods[2][5].
+1. Treatment effect analysis with `model4you` and ensemble methods.
+2. Analysis of personalized treatment options from a large clinical trial
