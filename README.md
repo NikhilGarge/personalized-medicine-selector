@@ -1,9 +1,9 @@
 # Personalized Medicine Framework for Type 2 Diabetes Treatment Optimization
-Developed a machine learning pipeline to predict optimal diabetes treatments using simulated genomic data. Implemented data preprocessing, feature selection, model training, and evaluation in R and Python. Skills: R, Python, machine learning, genomics
+Machine learning pipeline to predict optimal diabetes treatments using simulated genomic data. 
 
 ## Overview
 
-This project demonstrates a computational framework for **personalized treatment selection** that integrates genomic risk profiling with machine learning to optimize treatment selection for Type 2 Diabetes. By combining simulated genome-wide association study (GWAS) data and model-based recursive partitioning (MOB), we provide a framework for predicting personalized treatment responses based on genetic markers.
+This project demonstrates a computational framework for **personalized treatment selection** that integrates genomic risk profiling with machine learning to optimize treatment selection for Type 2 Diabetes. By combining simulated genome-wide association study (GWAS) data and model-based recursive partitioning (MOB), we provide a framework for predicting personalized treatment responses based on genetic markers. Implemented data preprocessing, feature selection, model training, and evaluation in R and Python. Skills: R, Python, machine learning, genomics
 
 ---
 
