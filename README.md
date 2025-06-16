@@ -34,11 +34,11 @@ This project demonstrates a computational framework for **personalized treatment
 - Python (≥ 3.8, optional for integration)
 
 ### R Packages  
-install.packages(c("model4you", "party", "caret", "dplyr", "tidyr"))
+`install.packages(c("model4you", "party", "caret", "dplyr", "tidyr"))`
 
 ### Clone Repository  
-git clone https://github.com/NikhilGarge/personalized-medicine-selector.git
-cd personalized-medicine-selector
+`git clone https://github.com/NikhilGarge/personalized-medicine-selector.git`
+`cd personalized-medicine-selector`
 
 ## Project Structure
 
@@ -59,8 +59,8 @@ cd personalized-medicine-selector
 ## How to Run
 
 1. **Clone the repository:**
-git clone https://github.com/NikhilGarge/personalized-medicine-selector.git
-cd personalized-medicine-selector
+`git clone https://github.com/NikhilGarge/personalized-medicine-selector.git`
+`cd personalized-medicine-selector`
 
 2. **Install dependencies:**  
 - R packages: `model4you`, `party`, `caret`, `dplyr`, etc.
@@ -69,14 +69,14 @@ cd personalized-medicine-selector
 3. **Run the main script:**
 Execute the main R script with default parameters:  
 
-source("Treatment_response_Code_v5.R")
+`source("Treatment_response_Code_v5.R")`
 
-results <- run_full_workflow(
+`results <- run_full_workflow(
 n_patients = 10000,
 n_snps = 1000,
 n_top_snps = 100,
 treatment_effects = c(T1 = 0, T2 = -0.3, T3 = -0.6, T4 = -0.9)
-)
+)`
 
 4. **Key Outputs:**
 - train_data / test_data: training and test sets.
