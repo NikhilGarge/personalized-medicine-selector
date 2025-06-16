@@ -37,8 +37,8 @@ This project demonstrates a computational framework for **personalized treatment
 `install.packages(c("model4you", "party", "caret", "dplyr", "tidyr"))`
 
 ### Clone Repository  
-`git clone https://github.com/NikhilGarge/personalized-medicine-selector.git`
-`cd personalized-medicine-selector`
+`git clone https://github.com/NikhilGarge/personalized-medicine-selector.git/`
+`cd personalized-medicine-selector/`
 
 ## Project Structure
 
@@ -60,7 +60,7 @@ This project demonstrates a computational framework for **personalized treatment
 
 1. **Clone the repository:**
 `git clone https://github.com/NikhilGarge/personalized-medicine-selector.git/`
-`cd personalized-medicine-selector`
+`cd personalized-medicine-selector/`
 
 2. **Install dependencies:**  
 - R packages: `model4you`, `party`, `caret`, `dplyr`, etc.
