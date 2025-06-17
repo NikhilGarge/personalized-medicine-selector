@@ -72,20 +72,22 @@ Skills: R, Python, TensorFlow, Keras, machine learning, deep learning, genomics,
 ## How to Run
 
 1. **Machine learning model (R) - Personalized treatment effect estimation:**  
-  Train and evaluate the MOB-based model:  
+  Train and evaluate the MOB-based model:
+
   `source("Genomic_Treatment_Selection_T2D.R")/`  
+
   `results <- run_full_workflow(
   n_patients = 10000,
   n_snps = 2000,
   n_top_snps = 20,
   treatment_effects = c(T1 = 0, T2 = -0.3, T3 = -0.6, T4 = -0.9),
   ntree = 300
-  )`
+  )`  
 
-2. **Deep Learning Model (Python) - Personalized treatment Prediction:**  
-  Train and evaluate the TensorFlow model:
+3. **Deep Learning Model (Python) - Personalized treatment Prediction:**  
+  Train and evaluate the TensorFlow model:  
   
-  `python Personalized_Treatment_genomics_T2D.py/`
+  `python Personalized_Treatment_genomics_T2D.py/`  
 
 3. **Key Outputs:**
 - Model accuracy metrics - MAE and R-Squared - for Deep learning (python) and MOB(R) models on train and test sets. 
