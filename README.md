@@ -93,7 +93,7 @@ Train and evaluate the TensorFlow model:
 3. **Key Outputs:**
 - Model accuracy metrics - MAE and R-Squared - for Deep learning (python) and MOB(R) models on train and test sets. 
 - Personalized/Optimal treatment prediction using Deep Learning model - high prediction accuracy.
-- Personalized treatment effect estimations using `model4you`. high explainability of results.- 
+- Personalized treatment effect estimations using `model4you` - highly explainable model.
 
 ---
 
