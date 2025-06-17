@@ -3,86 +3,97 @@ Machine learning pipeline to predict optimal diabetes treatments using simulated
 
 ## Overview
 
-This project demonstrates a computational framework for **personalized treatment selection** that integrates genomic risk profiling with machine learning to optimize treatment selection for Type 2 Diabetes. By combining simulated genome-wide association study (GWAS) data and model-based recursive partitioning (MOB), we provide a framework for predicting personalized treatment responses based on genetic markers. Implemented data preprocessing, feature selection, model training, and evaluation in R and Python. Skills: R, Python, machine learning, genomics
+This project demonstrates an advanced computational framework for personalized treatment selection that combines genomic risk profiling with both traditional machine learning and deep learning approaches. The framework optimizes Type 2 Diabetes treatment selection through:
 
----
+**Multi-Method Architecture**:
+- **Machine Learning Pipeline (R)**
+  - Model-based recursive partitioning (MOB) for idnetifying gene-treatment interactions
+  - GWAS-inspired data simulation with SNP-treatment effect modeling
+  - Feature selection using pmforest for genomic marker identification
+  - Treatment effect estimation via `model4you` library
 
-## Key Features  
+- **Deep Learning Pipeline (TensorFlow/Keras)**
+  - Deep neural networks for clinical outcome prediction (HbA1c levels)
+  - Embedding layers for genetic variant representation
+  - Multi-treatment interaction modeling
+  - Ensemble prediction of optimal treatment regimens
 
-### 1. **Simulated Genomic Data Generation**  
-   - Generates synthetic SNP datasets mimicking real-world genetic diversity.  
-   - Models gene-treatment interactions to identify treatment-responsive variants.
+**Implementation Highlights**:
+- Hybrid R/Python architecture for comparative analysis
+- Genomic data simulation with realistic SNP-treatment interactions
+- MOB-based patient stratification combined with neural network predictions
+- Cross-validate performance metrics for both approaches
 
-### 2. **SNP Prioritization**  
-   - Identifies top 100 statistically significant SNPs influencing treatment efficacy through gene-treatment interaction mapping.
+**Key Components**:
+1. Synthetic dataset generation (10k patients, 2000 SNPs)
+2. Dimensionality reduction for SNP selection (in R).
+3. No dimensionality reduction needed in Deep Learning model for predicting clinical outcomes for different treatments
+4. Comparative model evaluation framework
+5. Treatment recommendation engine with explainable AI components
 
-### 3. **Personalized Treatment Modeling**  
-   - Implements **ensemble MOB trees** using the `model4you` R library to:  
-   - Stratify patients into subgroups with differential treatment responses[1].  
-   - Estimate personalized treatment effects via bootstrapped subsampling[1][2].
-
-### 4. **Clinical Decision Support**  
-   - Outputs treatment recommendations tailored to individual genetic profiles.  
-   - Provides interpretable models for clinical translation[1].
+Skills: R, Python, TensorFlow, Keras, machine learning, deep learning, genomics, treatment effect analysis, data simulation
 
 ---
 
 ## Installation  
 
 ### Requirements  
-- R (≥ 4.0)  
-- Python (≥ 3.8, optional for integration)
+- Python (version ≥ 3.8) with packages: tensorflow, keras, numpy, pandas, scikit-learn
+- R (≥ 4.0) with packages: model4you, pmforest, data.table, caret
+- Git
 
-### R Packages  
-`install.packages(c("model4you", "party", "caret", "dplyr", "tidyr"))`
+## Steps
 
 ### Clone Repository  
 `git clone https://github.com/NikhilGarge/personalized-medicine-selector.git/`  
 `cd personalized-medicine-selector/`
 
+### Install Python Modules (from terminal)
+`pip install tensorflow keras numpy pandas scikit-learn`
+
+### Install R Packages (from R console)  
+`install.packages(c("model4you", "party", "caret", "dplyr", "tidyr"))`
+
 ## Project Structure
 
+- `Personalized_Treatment_genomics_T2D.ipynb`  
+  Python script for data simulation, deep learning model training, and evaluation. The goal of this code is to predict optimal treatment (tailored to individual's geneitic profile).
+  
 - `Genomic_Treatment_Selection_T2D.R`  
-  Main R script for data simulation, model training, and evaluation.
+  R script for data simulation, model training, and evaluation. The goal of this code is Personalized Treatment effect estimation via `model4you` library.
 
 - `README.md`  
   Project documentation.
 
-- (Optional) `notebooks/`  
-  Jupyter or R Markdown notebooks for exploratory analysis.
-
 - `results/`  
-  Output files, model summaries, and performance metrics.
+  Personalized Treatment effect estimation, model performance metrics, Optimal treatment prediction using deep learning
 
 ---
 
 ## How to Run
 
-1. **Clone the repository:**  
-`git clone https://github.com/NikhilGarge/personalized-medicine-selector.git/`  
-`cd personalized-medicine-selector/`
-
-3. **Install dependencies:**  
-- R packages: `model4you`, `party`, `caret`, `dplyr`, etc.
-- (Optional) Python: `rpy2` for R-Python integration.
-
-3. **Run the main script:**
-Execute the main R script with default parameters:  
+1. **Machine learning model (R) - Personalized treatment effect estimation:**
+Train and evaluate the MOB-based model:
 
 `source("Genomic_Treatment_Selection_T2D.R")/`
 
 `results <- run_full_workflow(
-n_patients = 1000,
+n_patients = 10000,
 n_snps = 2000,
 n_top_snps = 20,
 treatment_effects = c(T1 = 0, T2 = -0.3, T3 = -0.6, T4 = -0.9),
-ntree = 100
+ntree = 300
 )`
 
-4. **Key Outputs:**
-- train_data / test_data: training and test sets.
-- best_treatment_pred: Optimal treatment selected per patient on test data.
-- eval_results: Model evaluation using R-Squared metric on training and test sets. This helps in fine tuning the input parameters to avoid underfitting/overfitting of the models.
+2. **Deep Learning Model (Python) - Personalized treatment Prediction:**
+Train and evaluate the TensorFlow model:
+
+`python Personalized_Treatment_genomics_T2D.py/`
+
+3. **Key Outputs:**
+- Model accuracy metrics - MAE and R-Squared - for Deep learning (python) and MOB(R) models on train and test sets. 
+- Personalized/Optimal treatment prediction using Deep Learning model - high prediction accuracy.
+- Personalized treatment effect estimations using `model4you`. high explainability of results.- 
 
 ---
 
@@ -94,6 +105,3 @@ ntree = 100
 
 ---
 
-## References  
-1. Treatment effect analysis with `model4you` and ensemble methods.
-2. Analysis of personalized treatment options from a large clinical trial (APHA)
