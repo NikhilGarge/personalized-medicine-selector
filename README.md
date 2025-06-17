@@ -90,7 +90,7 @@ Skills: R, Python, TensorFlow, Keras, machine learning, deep learning, genomics,
   Train and evaluate the TensorFlow model:  
   
   ```
-  python Personalized_Treatment_genomics_T2D.py/`
+  python Personalized_Treatment_genomics_T2D.py`
   ```
 
 3. **Key Outputs:**
