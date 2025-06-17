@@ -1,5 +1,4 @@
 # Personalized Medicine Framework for Type 2 Diabetes Treatment Optimization
-Machine learning pipeline to predict optimal diabetes treatments using simulated genomic data. 
 
 ## Overview
 
