@@ -101,7 +101,7 @@ Train and evaluate the TensorFlow model:
 - Demonstrates how **genomic data** can bridge the gap between research and clinical practice.  
 - Provides methodology for:  
   - Precision treatment selection 
-  - Drug repurposing based on genetic subgroups[1][2].
+  - Drug repurposing based on genetic subgroups.
 
 ---
 
